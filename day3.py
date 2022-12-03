@@ -7,13 +7,15 @@ def get_data(input_data):
 
 
 def part1(data):
-    rucksack = {}
+    rucksack = []
     for line in data:
         list1 = []
         for i in range(0, len(line), len(line)//2 ):
             list1.append(line[i:i+len(line)//2])
-        print(list1)
-            
+            if len(list1) == 3:
+                del list1[2]
+        rucksack.append(list1)
+    print(rucksack)
 
 
 def part2(data):
